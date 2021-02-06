@@ -1,12 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+<head>
+  <meta charset="UTF-8">
+  <title>Седона</title>
+</head>
 
-  </body>
+<body>
+
+  <header>
+    <nav>
+      <a>
+        <img src="http://dummyimage.com/150x60.png/99cccc" alt="Логотип Седона">
+      </a>
+      <ul>
+        <li><a href="blank.html">Информация</a></li>
+        <li><a href="blank.html">Фото и видео</a></li>
+        <li><a href="blank.html">Карта штата</a></li>
+        <li><a href="catalog.html">Гостиницы</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Седона городок в Аризоне</h1>
+
+    <section>
+
+      <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
+          <p> Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+        <ol>
+        <li>
+         <h3>Настоящий городок </h3>
+          <p>Седона - не аттракцион для туристов, там
+            течёт своя жизнь</p>
+          <img src="http://dummyimage.com/150x60.png/99cccc" alt="фото городка">
+          <ul>
+            <li>
+              <h4>Жильё</h4>
+            <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </li>
+            <li>
+              <h4>Еда</h4>
+            <p>Не только китайского, но и местного производства!</p>
+            </li>
+            <li>
+              <h4>Сувениры</h4>
+            <p>Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
+        </li>
+        <li>
+         <h3>Там есть Мост дьявола</h3>
+          <p>Да, по нему можно пройти! Если конечно
+            вы осмелитесь</p>
+          <img src="http://dummyimage.com/150x60.png/99cccc" alt="фото  Моста дьявола">
+        </li>
+        <li>
+        <h3>небольшая площадь</h3>
+          <p>все достопримечательности находятся очень близко</p>
+        </li>
+        <li>
+        <h3>красивая дорога</h3>
+          <p>ехать в седону из лас-вегаса совсем не скучно!</p>
+        </li>
+        <li>
+        <h3>мало туристов</h3>
+          <p>большинство едет в гранд каньон и толпится там</p>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2> Заинтересовались?</h2>
+       <p>Укажите предполагаемые даты поездки, <br>
+      и мы покажем вам лучшие предложения гостиниц в седоне</p>
+         <button type="button">ПОИСК ГОСТИНИЦЫ В  СЕДОНЕ </button>
+
+          <form action="https://echo.htmlacademy.ru" method="POST">
+        <p>
+            <label for="appointment-date-in">Дата заездa</label>
+            <input id="appointment-date-in"  type="text" name="date-in" placeholder="24 апреля 2017">
+            <button type="button">Date</button>
+        </p>
+        <p>
+            <label for="appointment-date-of">Дата выезда:</label>
+            <input id="appointment-date-of" type="text" name="date-of" placeholder="4 июля 2017">
+            <button type="button">Date</button>
+        </p>
+        <p>
+            <label for="appointment-adultse">Взрослые:</label>
+            <button type="button">-</button>
+            <input id="appointment-adultse" type="text" name="number-ads" placeholder="2">
+            <button type="button">+</button>
+            <label for="appointment-children">Дети:</label>
+            <button type="button">-</button>
+            <input id="appointment-children" type="text" name="number-child" placeholder="0">
+            <button type="button">+</button>
+        </p>
+        <button type="submit">Найти</button>
+          </form>
+
+    </section>
+
+    <section>
+      <h2>Как нас найти?</h2>
+      <!--Здесь будет карта-->
+    </section>
+  </main>
+
+
+  <footer>
+
+    <section>
+      <h2> #VISITSEDONA</h2>
+      <p> Телефон: <a href="tel:+74956660166">+7 (495) 666-01-66</a>  </p>
+    </section>
+
+    <section>
+      <h2>Мы в соцсетях</h2>
+       <ul>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+        <li>
+          <a href="#">Fasebook</a>
+        </li>
+        <li>
+          <a href="#">YouTube</a>
+        </li>
+      </ul>
+    </section>
+
+    <p>
+      WEBSITE BY
+      <a href="https://htmlacademy.ru">HTML Academy</a>
+    </p>
+
+  </footer>
+
+</body>
 </html>

@@ -62,29 +62,26 @@
     </fieldset>
     <fieldset>
         <legend>Стоимость в сутки(Р):</legend>
-        <table>
-          <tr>
-              <td>от 0</td>
-              <td>До 3000</td>
-          </tr>
-      </table>
-       <!--кнопка регулятор-->
+          <label>от<input type="text" value="0"></label>
+          <label>до<input type="text" value="3000"></label>
+          <!--кнопка регулятор-->
         <input type="range" min="0" max="3000" value="2500" class="slider" id="myRange">
     </fieldset>
     </form>
-    <button type="submit">Показать</button>
+    <button type="button">Показать</button>
   </section>
 
   <section>
     <h2>Сортировка:</h2>
-    <a class="active" href="#">По цене</a>
-    <a href="#">По типу</a>
-    <a href="#">По рейтингу</a>
+    <a class="active" href="blank.html">По цене</a>
+       <a href="blank.html">По типу</a>
+       <a href="blank.html">По рейтингу</a>
+       <a href="blank.html">Вверх</a>
+       <a href="blank.html">Низ</a>
   </section>
 
   <section>
-    <h2>Найдено:</h2>
-    <a href="#result">3</a>
+    <h2>Найдено:3</h2>
     <ul>
       <li>
         <a href="blank.html">
@@ -93,12 +90,10 @@
             <img src="http://dummyimage.com/150x60.png/99cccc" width="135" height="90" alt="Гостиница Amara Resort & Spa">
           </p>
         </a>
-        <p>
-          Гостиница от 4000 ₽<br>
-          <button type="button">Подробнее</button>
-          <button type="button">Забронировать</button><br>
-        </p>
-      </li>
+        <p> Гостиница <span>от 4000 ₽</span></p>
+          <a href="blank.html">Подробнее</a>
+          <a href="blank.html">Забронировать</a>
+              </li>
       <li>
         <a href="blank.html">
           <h3>Desert Quail Inn</h3>
@@ -106,11 +101,9 @@
             <img src="http://dummyimage.com/150x60.png/99cccc" width="135" height="90" alt="Мотель Desert Quail Inn">
           </p>
         </a>
-        <p>
-          Мотель от 3000 ₽<br>
-          <button type="button">Подробнее</button>
-          <button type="button">Забронировать</button><br>
-        </p>
+        <p>Мотель<span>От 3000 Р.</span></p>
+          <a href="blank.html">Подробнее</a>
+          <a href="blank.html">Забронировать</a>
       </li>
       <li>
         <a href="blank.html">
@@ -119,11 +112,9 @@
             <img src="http://dummyimage.com/150x60.png/99cccc" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
           </p>
         </a>
-        <p>
-          Апартаменты от 2000 ₽<br>
-          <button type="button">Подробнее</button>
-          <button type="button">Забронировать</button><br>
-        </p>
+        <p>Апартаменты <span> от 2000 ₽</span></p>
+          <a href="blank.html">Подробнее</a>
+          <a href="blank.html">Забронировать</a>
       </li>
     </ul>
   </section>
