@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Седона</title>
@@ -7,53 +8,63 @@
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link  rel="stylesheet" href="css/normalize.css">
+    <link  rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap;subset=latin,cyrillic">
+
 </head>
 
-<body>
+<body class="page-body">
 
-  <header>
-    <nav>
-      <a href="index.html">
-        <img src="img/logo.svg" alt="Логотип Седона">
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="main-header-logo" href="index.html">
+        <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
       </a>
-      <ul>
-        <li><a href="blank.html">Информация</a></li>
-        <li><a href="blank.html">Фото и видео</a></li>
-        <li><a href="blank.html">Карта штата</a></li>
-        <li><a href="catalog.html">Гостиницы</a></li>
-      </ul>
+      <div class="main-navigation-wrapper">
+        <div class="container">
+           <ul class="main-site-navigation">
+             <li><a href="blank.html">Информация</a></li>
+             <li><a href="blank.html">Фото и видео</a></li>
+             <li><a href="blank.html">Карта штата</a></li>
+             <li><a href="catalog.html">Гостиницы</a></li>
+           </ul>
+       </div>
+    </div>
     </nav>
   </header>
 
-  <footer>
+  <footer class="main-footer">
 
-    <section>
-     <h2> #VISITSEDONA</h2>
-       <p>Телефон: <a href="tel:+74956660166">+7 (495) 666-01-66</a> </p>
-    </section>
-
-    <section>
+    <section class="footer-social">
       <h2>Мы в соцсетях</h2>
        <ul>
         <li>
-          <a href="#">Twitter</a>
+          <a class="social-button" href="#">
+            <img class="social-button-img" src="img/twitter.svg" alt="Twitter">
+          </a>
         </li>
         <li>
-          <a href="#">Fasebook</a>
+          <a class="social-button" href="#">
+            <img class="social-button-img" src="img/fb-icon.svg" alt="Fasebook">
+          </a>
         </li>
         <li>
-          <a href="#">YouTube</a>
+          <a class="social-button" href="#">
+           <img class="social-button-img" src="img/youtube.svg" alt="YouTube">
+          </a>
         </li>
       </ul>
     </section>
 
-    <p>
+    <p class="footer-copyright">
       WEBSITE BY
-      <a href="https://htmlacademy.ru">HTML Academy</a>
+       <a class="WEBSITEby" href="https://htmlacademy.ru">
+        <img src="img/logo-htmlacademy.svg" alt="htmlacademy">
+      </a>
     </p>
 
-    </footer>
+  </footer>
 
-  </body>
-
-  </html>
+</body>
+</html>
