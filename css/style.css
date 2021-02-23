@@ -6,6 +6,10 @@
   --text-gray: #333333;
   --text-white: #FFFFFF;
   --text-brown: #766357;
+  --text-white-clear:rgba(255, 255, 255, 0.3);
+  --text-black-clear:rgba(0, 0, 0, 0.3);
+  --white-01: rgba(225, 225, 225, 0.1);
+
 
 /*text catalog */
   --text-blue: #81B3D2;
@@ -73,6 +77,14 @@ img {
   color: var(--text-black) ;
 }
 
+.main-site-navigation a:hover {
+  color: var(--blue-style);
+}
+
+.main-site-navigation a:active {
+  color: var(--text-black-clear);
+}
+
  /*Main-Container*/
 .reasons-title {
   font-weight: normal;
@@ -83,7 +95,6 @@ img {
 
 .reasons-list {
   list-style: none;
-  color: var(--text-gray);
 }
 
 .reasons-title-desc {
@@ -107,12 +118,20 @@ img {
   color: var(--text-black);
 }
 
+.service-lead {
+  color: var(--text-gray);
+}
+
 .service-title {
   font-size: 21px;
   line-height: 21px;
 }
 
-.box {
+.reasons-item-lead-gray {
+  color: var(--text-gray);
+}
+
+.box-reasons {
   background-color: var(--gray-style2);
 }
 
@@ -120,14 +139,22 @@ img {
 
 .appointment {
   background-color: var(--white-style);
+  }
+
+.appointment-form {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
 }
 .appointment-title {
+  font-weight: bold;
   font-size: 30px;
   line-height: 24px;
 }
 
 .apointment-info {
   line-height: 24px;
+  color:  var(--text-gray);
 }
 
 /*Button*/
@@ -136,19 +163,25 @@ img {
   font: inherit;
   text-align: center;
   color: var(--text-white);
+  font-weight: bold;
   vertical-align: middle;
   text-transform: uppercase;
   background-color: var(--brown-style);
   border: none;
 }
 
+.button-search {
+  font-size: 21px;
+  line-height: 26px;
+}
+
 .button:hover {
   background-color: var(--brown-style2);
 }
 
- .button:focus {
+ .button:active{
  background-color: var(--brown-style3);
- color: rgba(255, 255, 255, 0.3);
+ color: var(--text-white-clear);
 }
 
 .button-date,
@@ -156,52 +189,98 @@ img {
 .button-plus {
   font: inherit;
   text-align: center;
-  color: var(--text-black);
+  color: var(--gray-style3);
   vertical-align: middle;
   text-transform: uppercase;
-  background-color: var(--gray-style3);
   border: none;
   }
 
 .button-date:hover,
 .button-minus:hover,
 .button-plus:hover {
-  background-color: var(--text-black);
+  color: var(--text-black);
 }
 
-.button-date:focus,
-.button-minus:focus,
-.button-plus:focus {
-  background-color: var(--blue-style);
+.button-date:active,
+.button-minus:active,
+.button-plus:active {
+  color: var(--blue-style);
 }
 
 .button-find {
   font: inherit;
   text-align: center;
   color: var(--text-white);
+  font-weight: bold;
   vertical-align: middle;
   text-transform: uppercase;
   background-color: var(--blue-style);
   border: none;
 }
 
+.button-search {
+  font-size: 21px;
+  line-height: 26px;
+}
+
 .button-find:hover {
   background-color: var(--blue-style2);
 }
 
- .button-find:focus {
+ .button-find:active {
  background-color: var(--blue-style3);
- color: rgba(255, 255, 255, 0.3);
+ color: var(--text-black-clear);
 }
 
 
-/* ПРАВКИ*/
-.appointment-date-of input {
-  font: inherit;
+/* Appoinment*/
+.appointment-item-form input {
   background: var(--gray-fone);
-  border: 2px solid var(--gray-borders);
+  border: 2px solid var(--gray-fone);
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
+.appointment-item-form input:hover {
+  background: var(--strong-gray-style);
+  border: 2px solid var(--strong-gray-style);
+  }
+
+.appointment-item-form input:focus{
+  background: var(--white-style);
+  border: 2px solid var(--gray-borders);
+  outline: none;
+}
+
+.appointment-item-figure input {
+  background: var(--gray-fone);
+  border: 2px solid var(--gray-fone);
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.appointment-item-figure input:hover {
+  background: var(--strong-gray-style);
+  border: 2px solid var(--strong-gray-style);
+}
+
+.appointment-item-figure input:focus{
+  background: var(--white-style);
+  border: 2px solid var(--gray-borders);
+  outline: none;
+}
+
+.appointment-item-form input::placeholder {
+  color: var(--text-black);
+  opacity: 1;
+}
+
+.appointment-item-figure input::placeholder {
+  color: var(--text-black);
+  opacity: 1;
+}
 
 /*Map*/
 /*------*/
@@ -261,7 +340,7 @@ img {
   color: var(--text-white);
   vertical-align: middle;
   text-transform: uppercase;
-  background-color: rgba(225, 225, 225, 0.1);
+  background-color: var(--white-01);
   border: 2px solid var(--white-style);
   border-radius: 2px;
 }
@@ -282,14 +361,16 @@ img {
 .sorting-list {
   list-style: none;
 }
-
 .sorting-item a {
-  color:rgba(0, 0, 0, 0.3);
-  border-bottom: 1px dotted;
-  border-bottom-color: var(--blue-style);
+  color: var(--text-black-clear);
+  text-decoration: dotted underline var(--blue-style)
 }
 
 .sorting-item a:hover {
+  color: var(--blue-style);
+}
+
+.sorting-item a:focus {
   color: var(--blue-style);
 }
 
@@ -297,11 +378,7 @@ img {
   color: var(--text-black);
 }
 
-.sorting-item a:focus {
-  color: var(--blue-style);
-}
-
-.sorting-item-price a:not([href]) {
+.sorting-item-price a {
   color: var(--text-blue);
 }
 
@@ -311,19 +388,19 @@ img {
   color: var(--text-black);
   vertical-align: middle;
   text-transform: uppercase;
-  background-color: var(--gray-sorting);
+  color: var(--gray-sorting);
   border: none;
 }
 .sorting-button a:hover {
-  background-color: var(--text-black);
+  color: var(--text-black);
 }
 
 .sorting-button a:active {
-  background-color: var(--blue-style);
+  color: var(--blue-style);
 }
 
-.sorting-button-down a:not([href]) {
- background-color: var(--text-blue);
+.sorting-button-down a {
+ color: var(--text-blue);
 }
 
 /*Catalog*/
@@ -338,19 +415,28 @@ img {
   list-style: none;
 }
 
-.catalog-category {
+.catalog-name a{
   color: var(--text-black);
+  font-weight: bold;
   font-size: 21px;
   line-height: 26px;
 }
 
-.catalog-item-hotel,
+.catalog-name a:hover {
+  color: var(--blue-style);
+}
+
+.catalog-name a:active {
+  color: var(--text-black-clear);
+}
+
+.catalog-item,
 .catalog-item-motel,
 .catalog-item-rectangle {
   background-color: var(--white-style);
 }
 
-.button-reyting {
+.reyting {
   text-align: center;
   text-transform: uppercase;
   font: inherit;
@@ -360,6 +446,50 @@ img {
   border: none;
   width: 110px;
   height: 27px;
+}
+
+.catalog-price {
+  color: var(--text-gray);
+}
+
+.button-catalog {
+  font: inherit;
+  font-weight: bold;
+  text-align: center;
+  color: var(--text-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--blue-style);
+  border: none;
+}
+
+.button-catalog:hover {
+  background-color: var(--blue-style2);
+}
+
+.button-catalog:active {
+  background-color: var(--blue-style3);
+  color: var(--text-white-clear);
+}
+
+.button-reserv {
+  font: inherit;
+  font-weight: bold;
+  text-align: center;
+  color: var(--text-white);
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: var(--brown-style);
+  border: none;
+}
+
+.button-reserv:hover {
+  background-color: var(--brown-style2);
+}
+
+.button-reserv:active {
+  background-color: var(--brown-style3);
+  color: var(--text-white-clear);
 }
 
 
