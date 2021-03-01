@@ -10,7 +10,6 @@
   --text-black-clear:rgba(0, 0, 0, 0.3);
   --white-01: rgba(225, 225, 225, 0.1);
 
-
 /*text catalog */
   --text-blue: #81B3D2;
 
@@ -34,10 +33,16 @@
 --gray-borders: #E5E5E5;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 /*Body*/
 
 .page-body {
-  min-width: 1280px;
+  min-width: 1200px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -47,6 +52,20 @@
   color: var(--text-black);
   text-transform: uppercase;
   background-color: var(--gray-fone);
+
+
+}
+
+.desc {
+  min-width: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  justify-content: center;
+  width: 1200px;
+  margin-left: 0;
+  padding: 0;
+
 }
 
 a {
@@ -58,19 +77,94 @@ img {
   height: auto;
 }
 
+/* Grid*/
+
+.page {
+  height: 100%;
+}
+
+.main-header {
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+  outline-offset: -5px;
+}
+.main-header-logo {
+
+   outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+}
+
+.headline {
+  outline: 5px solid rgba(255, 205, 0, 0.3);
+  outline-offset: -5px;
+}
+
+.reasons-item-preview{
+  outline: 5px solid rgba(37, 102, 207, 0.87);
+  outline-offset: -5px;
+}
+
+.service-list {
+  outline: 5px solid rgba(243, 9, 192, 0.87);
+  outline-offset: -5px;
+}
+
+.box-reasons {
+  outline: 5px solid rgba(93, 107, 76, 0.87);
+  outline-offset: -5px;
+}
+
+.appointment {
+  outline: 5px solid rgba(18, 207, 221, 0.877);
+  outline-offset: -5px;
+}
+
+.main-header-logo {
+  outline: 5px solid rgba(255, 0, 0, 0.3);
+  outline-offset: -5px;
+}
+
+.min-site-navigation {
+  outline: 5px solid rgba(0, 255, 255, 0.3);
+  outline-offset: -5px;
+  list-style: none;
+}
+
 /*header*/
 /*Navigation*/
 
 .main-header {
   background-color: var(--white-style);
 }
+
 .main-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   line-height: 26px;
   font-weight: bold;
  }
 
+.main-header-logo {
+  align-items: flex-start;
+  width: 138px;
+  height: 70px;
+
+justify-self: center;
+}
+
+.container-navigation {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .main-site-navigation {
   list-style: none;
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+
 }
 
 .main-site-navigation a {
@@ -86,22 +180,55 @@ img {
 }
 
  /*Main-Container*/
+
+.headline {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background-color: var(--white-style);
+
+}
+
 .reasons-title {
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
   color: var(--text-gray);
+  width: 519px;
+  height: 26px;
+
+  align-self: center;
+  margin: 0px;
+  margin-left: 340px;
+  margin-right: 341px;
+
+  order: 1;
 }
 
 .reasons-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.reasons-item-preview h3 {
+  margin: 0px;
+  align-items: center;
 }
 
 .reasons-title-desc {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
+  width: 470px;
+  height: 80px;
+
+  margin: 0 365px;
+  align-self: center;
+  padding-bottom: 16px;
 }
+
 .reasons-title,
 .reasons-title-desc {
   background-color: var(--white-style) ;
@@ -110,42 +237,82 @@ img {
 .reasons-item-preview {
   color: var(--text-white);
   background-color: var(--blue-style);
-  }
+}
+
+.service-item {
+  text-align: center;
+  outline: 5px solid rgba(0, 255, 255 , 0.3);
+  outline-offset: -5px;
+}
 
 .service-list {
   list-style: none;
   background-color: var(--white-style);
   color: var(--text-black);
+
+  display: grid;
+  padding: 0px;
+  grid-template-columns: 1fr 1fr 1fr;
+  height:  330px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .service-lead {
   color: var(--text-gray);
+  margin: 0 73px;
+}
+
+.reasons3 {
+  background-color: var(--gray-style2);
+
+  outline: 5px solid rgba(212, 226, 14, 0.979);
+  outline-offset: -5px;
+
+  display: grid;
+  padding: 0px;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 256px;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
 }
 
 .service-title {
   font-size: 21px;
   line-height: 21px;
+
+}
+.service-title h3 {
+  margin: 0 0px;
 }
 
 .reasons-item-lead-gray {
   color: var(--text-gray);
-}
-
-.box-reasons {
-  background-color: var(--gray-style2);
+  margin: 0 96px;
 }
 
 /*Appointment*/
 
 .appointment {
   background-color: var(--white-style);
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   }
+
+.appointment-title {
+  margin: 0px;
+}
 
 .appointment-form {
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
 }
+
 .appointment-title {
   font-weight: bold;
   font-size: 30px;
@@ -168,6 +335,10 @@ img {
   text-transform: uppercase;
   background-color: var(--brown-style);
   border: none;
+
+  width: 568px;
+  height: 86px;
+  align-self: center;
 }
 
 .button-search {
@@ -216,12 +387,11 @@ img {
   text-transform: uppercase;
   background-color: var(--blue-style);
   border: none;
+
+  width: 458px;
+  height: 58px;
 }
 
-.button-search {
-  font-size: 21px;
-  line-height: 26px;
-}
 
 .button-find:hover {
   background-color: var(--blue-style2);
@@ -289,6 +459,10 @@ img {
 
 .main-footer {
   background-color: var(--white-style);
+
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+
 }
 
 .footer-contacts {
@@ -297,6 +471,8 @@ img {
   font-size: 21px;
   line-height: 26px;
   text-decoration: none;
+
+  margin-left: 111px;
 }
 
 .footer-contacts a {
@@ -308,6 +484,12 @@ img {
   list-style: none;
   color: var(--text-black);
   }
+
+.main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
 
   /*----Catalog-----*/
 
@@ -356,11 +538,19 @@ img {
   background-color: var(--white-style);
   font-size: 12px;
   line-height: 18px;
+  font-weight: normal;
+}
+
+.sorting-title {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
 }
 
 .sorting-list {
   list-style: none;
 }
+
 .sorting-item a {
   color: var(--text-black-clear);
   text-decoration: dotted underline var(--blue-style)
@@ -376,6 +566,7 @@ img {
 
 .sorting-item a:active {
   color: var(--text-black);
+  text-decoration:none;
 }
 
 .sorting-item-price a {
@@ -390,7 +581,9 @@ img {
   text-transform: uppercase;
   color: var(--gray-sorting);
   border: none;
+  background-color: var(--white-style);
 }
+
 .sorting-button a:hover {
   color: var(--text-black);
 }
@@ -400,7 +593,8 @@ img {
 }
 
 .sorting-button-down a {
- color: var(--text-blue);
+  color: var(--text-blue);
+  background-color: var(--white-style);
 }
 
 /*Catalog*/
