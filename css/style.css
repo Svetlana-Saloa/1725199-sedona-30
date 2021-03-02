@@ -53,7 +53,6 @@
   text-transform: uppercase;
   background-color: var(--gray-fone);
 
-
 }
 
 .desc {
@@ -65,9 +64,19 @@
   width: 1200px;
   margin-left: 0;
   padding: 0;
-
 }
 
+.page-catalog {
+  min-width: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  justify-content: center;
+  width: 1200px;
+  margin-left: 0;
+  padding: 0;
+
+}
 a {
   text-decoration: none;
 }
@@ -83,51 +92,6 @@ img {
   height: 100%;
 }
 
-.main-header {
-  outline: 5px solid rgba(0, 255, 0, 0.7);
-  outline-offset: -5px;
-}
-.main-header-logo {
-
-   outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
-}
-
-.headline {
-  outline: 5px solid rgba(255, 205, 0, 0.3);
-  outline-offset: -5px;
-}
-
-.reasons-item-preview{
-  outline: 5px solid rgba(37, 102, 207, 0.87);
-  outline-offset: -5px;
-}
-
-.service-list {
-  outline: 5px solid rgba(243, 9, 192, 0.87);
-  outline-offset: -5px;
-}
-
-.box-reasons {
-  outline: 5px solid rgba(93, 107, 76, 0.87);
-  outline-offset: -5px;
-}
-
-.appointment {
-  outline: 5px solid rgba(18, 207, 221, 0.877);
-  outline-offset: -5px;
-}
-
-.main-header-logo {
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
-}
-
-.min-site-navigation {
-  outline: 5px solid rgba(0, 255, 255, 0.3);
-  outline-offset: -5px;
-  list-style: none;
-}
 
 /*header*/
 /*Navigation*/
@@ -241,8 +205,6 @@ justify-self: center;
 
 .service-item {
   text-align: center;
-  outline: 5px solid rgba(0, 255, 255 , 0.3);
-  outline-offset: -5px;
 }
 
 .service-list {
@@ -265,9 +227,6 @@ justify-self: center;
 
 .reasons3 {
   background-color: var(--gray-style2);
-
-  outline: 5px solid rgba(212, 226, 14, 0.979);
-  outline-offset: -5px;
 
   display: grid;
   padding: 0px;
@@ -459,9 +418,11 @@ justify-self: center;
 
 .main-footer {
   background-color: var(--white-style);
+}
 
-  outline: 5px solid rgba(255, 0, 0, 0.7);
-  outline-offset: -5px;
+.main-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 
 }
 
@@ -472,7 +433,10 @@ justify-self: center;
   line-height: 26px;
   text-decoration: none;
 
-  margin-left: 111px;
+  margin: 0;
+  text-align: center;
+  justify-self: stretch;
+
 }
 
 .footer-contacts a {
@@ -483,15 +447,25 @@ justify-self: center;
   .footer-social ul {
   list-style: none;
   color: var(--text-black);
+
+  text-align: center;
   }
 
-.main-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
+.footer-copyright {
+  margin-top: 49px;
+  justify-self: center;
 }
 
   /*----Catalog-----*/
+.filters{
+  outline-offset: -5px;
+  outline: 5px solid rgba(255, 0, 0, 0.7);
+}
+
+.houseroom {
+  outline-offset: -5px;
+  outline: 5px solid rgba(0, 255, 0, 0.7);
+}
 
   /*navigation*/
 
@@ -506,15 +480,39 @@ justify-self: center;
   background-image: url("../img/background2.png")
 }
 
+.box h2 {
+  margin: 0px;
+}
+
+.filter-form fieldset {
+  padding: 0;
+  margin: 0;
+  margin-left: 72px;
+
+  border: none;
+
+}
+.filter-form{
+  display: flex;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 1200px;
+
+}
 .filter {
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
+  align-items: center;
 }
 
 .filter-items {
   list-style: none;
+  align-self: center;
 }
+
 
 .button-form {
   font: inherit;
@@ -533,6 +531,9 @@ justify-self: center;
 }
 
 /*Sorting*/
+.houseroom {
+  width: 1200px;
+}
 
 .sorting {
   background-color: var(--white-style);
@@ -545,10 +546,17 @@ justify-self: center;
   font-size: 12px;
   line-height: 18px;
   font-weight: normal;
+  margin: 0px;
+  margin-left: 73px;
 }
 
 .sorting-list {
   list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display:flex ;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .sorting-item a {
@@ -603,10 +611,23 @@ justify-self: center;
   font-size: 21px;
   line-height: 26px;
   background-color: var(--white-style);
+  margin-left: 73px;
 }
 
 .catalog-list {
   list-style: none;
+  padding: 0px;
+  display: grid;
+  gap: 1px 0px;
+  align-items: baseline;
+}
+
+.sorting-button {
+  justify-self: end;
+}
+
+.sorting-button-down {
+  justify-self: end;
 }
 
 .catalog-name a{
