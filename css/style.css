@@ -55,15 +55,14 @@
 
 }
 
-.desc {
-  min-width: 100%;
+.container {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   justify-content: center;
   width: 1200px;
-  margin-left: 0;
   padding: 0;
+ margin: 0 auto;
 }
 
 .page-catalog {
@@ -77,6 +76,11 @@
   padding: 0;
 
 }
+
+.content{
+  text-align: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -101,34 +105,39 @@ img {
 }
 
 .main-navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   line-height: 26px;
   font-weight: bold;
  }
 
 .main-header-logo {
-  align-items: flex-start;
   width: 138px;
   height: 70px;
 
-justify-self: center;
-}
-
-.container-navigation {
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-site-navigation {
   list-style: none;
-  width: 1200px;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  padding: 15px 72px;
+  margin: 0px;
+}
 
+.main-site-navigation li {
+  width: 228px;
+}
+
+.nav2 {
+  margin: auto;
+}
+.nav3 {
+  text-align: right;
+}
+.nav4 {
+  text-align: right;
 }
 
 .main-site-navigation a {
@@ -143,7 +152,33 @@ justify-self: center;
   color: var(--text-black-clear);
 }
 
- /*Main-Container*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.welcome {
+  width: 1200px;
+  height: 500px;
+}
+.welcome  .welcome-to-sedona {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+ /*Main-Content*/
+
 
 .headline {
   display: grid;
@@ -161,8 +196,7 @@ justify-self: center;
   width: 519px;
   height: 26px;
 
-  align-self: center;
-  margin: 0px;
+  text-align: center;
   margin-left: 340px;
   margin-right: 341px;
 
@@ -174,11 +208,12 @@ justify-self: center;
   padding: 0;
   margin: 0;
 
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.reasons-item-preview h3 {
+ .reasons-item-preview h3 {
   margin: 0px;
-  align-items: center;
 }
 
 .reasons-title-desc {
@@ -189,7 +224,7 @@ justify-self: center;
   height: 80px;
 
   margin: 0 365px;
-  align-self: center;
+  margin-top: 42.5px;
   padding-bottom: 16px;
 }
 
@@ -201,6 +236,39 @@ justify-self: center;
 .reasons-item-preview {
   color: var(--text-white);
   background-color: var(--blue-style);
+  width: 100%;
+}
+
+.service-title1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text1{
+  width: 400px;
+  align-self: center;
+}
+
+.foto-sedona  {
+  width: 800px;
+  height: 256px;
+}
+
+.service-title2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text2 {
+  width: 400px;
+  align-self: center;
+  order: 1;
+}
+
+.foto-bridge {
+  width: 800px;
+  height: 256px;
+
 }
 
 .service-item {
@@ -215,7 +283,7 @@ justify-self: center;
   display: grid;
   padding: 0px;
   grid-template-columns: 1fr 1fr 1fr;
-  height:  330px;
+  min-height:  330px;
   align-items: center;
   justify-content: space-between;
 }
@@ -225,21 +293,17 @@ justify-self: center;
   margin: 0 73px;
 }
 
-.reasons3 {
+.reasons-item {
   background-color: var(--gray-style2);
-
-  display: grid;
-  padding: 0px;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 256px;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
+  width: 400px;
+  min-height: 256px;
+  align-self: center;
 }
 
 .service-title {
   font-size: 21px;
   line-height: 21px;
+  margin-top: 47px;
 
 }
 .service-title h3 {
@@ -255,15 +319,11 @@ justify-self: center;
 
 .appointment {
   background-color: var(--white-style);
-
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   }
 
 .appointment-title {
   margin: 0px;
+  padding-top: 58px;
 }
 
 .appointment-form {
@@ -294,10 +354,8 @@ justify-self: center;
   text-transform: uppercase;
   background-color: var(--brown-style);
   border: none;
-
   width: 568px;
-  height: 86px;
-  align-self: center;
+  min-height: 86px;
 }
 
 .button-search {

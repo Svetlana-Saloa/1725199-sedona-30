@@ -14,28 +14,29 @@
 
  </head>
 
-<body class="page-body">
+<body class="page-body container">
 
-<div class="desc">
 
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
         <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
       </a>
-      <div class="container-navigation">
         <ul class="main-site-navigation">
-        <li><a href="blank.html">Информация</a></li>
-        <li><a href="blank.html">Фото и видео</a></li>
-        <li><a href="blank.html">Карта штата</a></li>
-        <li><a href="catalog.html">Гостиницы</a></li>
+        <li class="nav1"><a href="blank.html">Информация</a></li>
+        <li class="nav2" ><a href="blank.html">Фото и видео</a></li>
+        <li class="nav3"><a href="blank.html">Карта штата</a></li>
+        <li class="nav4"><a href="catalog.html">Гостиницы</a></li>
       </ul>
-</div>
     </nav>
 </header>
 
-<main class="container">
-    <h1>Седона городок в Аризоне</h1>
+<main class="content">
+    <h1 class="visually-hidden">Седона городок в Аризоне</h1>
+      <div class="welcome">
+        <img src="img/background photo.jpg" width="1200" height="500" alt="фото Каньйона">
+        <img class="welcome-to-sedona" src="img/welcome.png" alt="Добро пожаловать в Седону">
+      </div>
 
     <section class="reasons">
       <div class=" headline">
@@ -43,11 +44,13 @@
         <p class="reasons-title-desc"> Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
       </div>
         <ol class="reasons-list">
-          <li class="reasons-item-preview">
+        <li class="reasons-item-preview service-title1">
+          <div class="text1">
             <h3 class="service-title">Настоящий городок </h3>
             <p class="reasons-item-lead">— №1 —</p>
             <p class="reasons-item-lead">Седона - не аттракцион для туристов, там   течёт своя жизнь</p>
-            <img src="img/town.jpg" width="800" height="256" alt="фото городка Cедона">
+          </div>
+            <img class="foto-sedona" src="img/town.jpg" width="800" height="256" alt="фото городка Cедона">
             <ul class="service-list">
               <li class="service-item">
               <h4 class="service-title">Жильё</h4>
@@ -63,31 +66,31 @@
               </li>
             </ul>
         </li>
-        <li class="reasons-item-preview">
-         <h3 class="service-title">Там есть Мост дьявола</h3>
-          <p class="reasons-item-lead">— №2 —</p>
-          <p class="reasons-item-lead">Да, по нему можно пройти! Если конечно
-            вы осмелитесь</p>
-          <img src="img/bridge.jpg" width="800" height="256" alt="фото  Моста дьявола">
+        <li class="reasons-item-preview service-title2">
+          <div class="text2">
+            <h3 class="service-title">Там есть Мост дьявола</h3>
+            <p class="reasons-item-lead">— №2 —</p>
+            <p class="reasons-item-lead">Да, по нему можно пройти! Если конечно
+              вы осмелитесь</p>
+          </div>
+          <img class="foto-bridge" src="img/bridge.jpg" width="800" height="256" alt="фото  Моста дьявола">
         </li>
-        <div class="reasons3">
-        <li class="reasons-item box-reasons">
+        <li class="reasons-item">
         <h3 class="service-title">небольшая площадь</h3>
           <p class="reasons-item-lead-gray">— №3 —</p>
           <p class="reasons-item-lead-gray">все достопримечательности находятся очень близко</p>
         </li>
-        <li class="reasons-item box-reasons">
+        <li class="reasons-item">
         <h3 class="service-title">красивая дорога</h3>
           <p class="reasons-item-lead-gray">— №4 —</p>
           <p class="reasons-item-lead-gray">ехать в седону из лас-вегаса совсем не скучно!</p>
         </li>
-        <li class="reasons-item box-reasons">
+        <li class="reasons-item">
         <h3 class="service-title">мало туристов</h3>
           <p class="reasons-item-lead-gray">— №5 —</p>
           <p class="reasons-item-lead-gray">большинство едет в гранд каньон и толпится там</p>
         </li>
-        </div>
-      </ol>
+        </ol>
     </section>
 
     <section class="appointment">
@@ -138,7 +141,7 @@
     </section>
 
     <section class="footer-social">
-      <h2>Мы в соцсетях</h2>
+      <h2 class="visually-hidden">Мы в соцсетях</h2>
        <ul>
         <li>
           <a class="social-button" href="#">Twitter</a>
@@ -161,7 +164,6 @@
 
   </footer>
 
-</div>
 
 </body>
 </html>
