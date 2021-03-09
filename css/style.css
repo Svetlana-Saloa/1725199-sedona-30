@@ -62,7 +62,7 @@
   justify-content: center;
   width: 1200px;
   padding: 0;
- margin: 0 auto;
+  margin: 0 auto;
 }
 
 .page-catalog {
@@ -107,6 +107,7 @@ img {
 .main-navigation {
   line-height: 26px;
   font-weight: bold;
+  position: relative;
  }
 
 .main-header-logo {
@@ -121,6 +122,7 @@ img {
 .main-site-navigation {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   padding: 15px 72px;
   margin: 0px;
 }
@@ -129,13 +131,15 @@ img {
   width: 228px;
 }
 
-.nav2 {
-  margin: auto;
+.main-site-navigation li:nth-child(2) {
+  margin-right: auto;
 }
-.nav3 {
+
+.main-site-navigation li:nth-child(3) {
   text-align: right;
 }
-.nav4 {
+
+.main-site-navigation li:nth-child(4) {
   text-align: right;
 }
 
@@ -168,13 +172,15 @@ img {
   width: 1200px;
   height: 500px;
 }
+
 .welcome  .welcome-to-sedona {
   position: absolute;
-  top: 130px;
+  top: 133px;
   left: 50%;
+  width: 457px;
+  height: 351px;
   transform: translateX(-50%);
 }
-
 
  /*Main-Content*/
 
@@ -245,7 +251,11 @@ img {
 
 .text1{
   width: 400px;
+  min-height: 256px;
   align-self: center;
+  padding-top: 47px;
+  padding-left: 52px;
+  padding-right: 51px;
 }
 
 .foto-sedona  {
@@ -260,8 +270,12 @@ img {
 
 .text2 {
   width: 400px;
+  min-height: 256px;
   align-self: center;
   order: 1;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 49px;
 }
 
 .foto-bridge {
@@ -273,6 +287,7 @@ img {
 .service-item {
   text-align: center;
 }
+
 
 .service-list {
   list-style: none;
@@ -307,6 +322,44 @@ img {
 }
 .service-title h3 {
   margin: 0 0px;
+}
+.service-list {
+  position: relative;
+}
+.icon1::before{
+  position: absolute;
+  content: "";
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/icon-home.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 60px;
+  left: 162px;
+}
+
+.icon2::before{
+  position: absolute;
+  content: "";
+  width: 75px;
+  height: 70px;
+  background-image: url("../img/icon-food.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 61px;
+  left: 562px;
+}
+
+.icon3::before{
+  position: absolute;
+  content: "";
+  width: 64px;
+  height: 77px;
+  background-image: url("../img/icon-present.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 55px;
+  left: 968px;
 }
 
 .reasons-item-lead-gray {
@@ -469,6 +522,7 @@ img {
 }
 
 /*Map*/
+
 /*------*/
 
 /*Footer*/
