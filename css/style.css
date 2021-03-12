@@ -106,6 +106,21 @@ img {
 }
 
 
+ /* Visually*/
+
+ .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*header*/
 /*Navigation*/
 
@@ -164,19 +179,6 @@ img {
   color: var(--text-black-clear);
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .welcome {
   width: 1200px;
   height: 500px;
@@ -192,7 +194,6 @@ img {
 }
 
  /*Main-Content*/
-
 
 .headline {
   display: grid;
@@ -332,9 +333,11 @@ img {
 .service-title h3 {
   margin: 0 0px;
 }
+
 .service-list {
   position: relative;
 }
+
 .icon1::before{
   position: absolute;
   content: "";
@@ -490,7 +493,6 @@ img {
   margin-right: 17px;
 }
 
-
 .date-in {
   padding-top: 50px;
 }
@@ -605,7 +607,6 @@ height: 38px;
   height: 58px;
 }
 
-
 .button-find:hover {
   background-color: var(--blue-style2);
 }
@@ -615,8 +616,6 @@ height: 38px;
  color: var(--text-black-clear);
 }
 
-
-
 /*Map*/
 
 .map{
@@ -625,6 +624,7 @@ height: 38px;
   position:relative;
   height:0;
 }
+
 .map iframe{
   left:0;
   top:100%;
@@ -704,7 +704,6 @@ height: 38px;
   fill: var(--white-01);
 }
 
-
 .footer-copyright .by {
   padding-top: 0px;
   position: absolute;
@@ -712,7 +711,6 @@ height: 38px;
   right: 123px;
   width: 74px;
 }
-
 
 .web-by:hover path {
   fill: var(--blue-style);
@@ -722,7 +720,6 @@ height: 38px;
   fill: var(--gray-web);
 }
 
-  /*----Catalog-----*/
 
   /*navigation*/
 
@@ -802,7 +799,6 @@ position: relative;
   box-sizing: unset;
 }
 
-
 .range-controls .toggle-max {
   left: 205px;
 }
@@ -841,7 +837,6 @@ position: relative;
   list-style: none;
 }
 
-
 .filter-option label {
   position: relative;
   display: block;
@@ -873,7 +868,6 @@ color: var(--white-style);
   height: 23px;
   background-image: url("../img/checkbox-on.svg");
 }
-
 
 .button-form {
   font: inherit;
@@ -973,6 +967,7 @@ color: var(--white-style);
 .sorting-item-price a {
   color: var(--text-blue);
 }
+
 /*Catalog*/
 
 .catalog-title {
@@ -1090,6 +1085,10 @@ color: var(--white-style);
   height: 150px;
 }
 
+.catalog-list li:nth-last-child(1) {
+  margin-bottom: 1px;
+}
+
 .hotel1 {
 width: 135px;
 height: 90px;
@@ -1105,6 +1104,7 @@ position: relative;
 .hotel3 {
 margin-left: auto;
 padding-top: 96px;
+position: relative;
 }
 
 .motel1 {
@@ -1133,7 +1133,45 @@ padding-top: 96px;
 .motel3 {
   margin-left: auto;
   padding-top: 96px;
+  position: relative;
 }
+
+.star1 {
+  content: "";
+  position: absolute;
+  background-image: url(../img/star.svg);
+  top: 0;
+  left: 24px;
+  width: 85px;
+  height: 23px;
+  margin-top: 29px;
+  background-repeat: space;
+}
+
+.star2 {
+  content: "";
+  position: absolute;
+  background-image: url(../img/star.svg);
+  top: 0;
+  left: 40px;
+  width: 66px;
+  height: 23px;
+  margin-top: 29px;
+  background-repeat: space;
+}
+
+.star3 {
+  content: "";
+  position: absolute;
+  background-image: url(../img/star.svg);
+  top: 0;
+  left: 64px;
+  width: 45px;
+  height: 23px;
+  margin-top: 29px;
+  background-repeat: space;
+}
+
 
 .rectangle1{
   width: 135px;
@@ -1161,6 +1199,7 @@ padding-top: 96px;
 .rectangle3{
   margin-left: auto;
   padding-top: 96px;
+  position: relative;
 }
 
 .reyting {
@@ -1174,6 +1213,7 @@ padding-top: 96px;
   width: 110px;
   height: 27px;
   margin: 0;
+  padding-top: 4px;
 }
 
 .catalog-price {
