@@ -8,6 +8,8 @@
   --text-brown: #766357;
   --text-white-clear:rgba(255, 255, 255, 0.3);
   --text-black-clear:rgba(0, 0, 0, 0.3);
+  --text-clear:rgba(0, 0, 0, 0.01);
+
   --white-01: rgba(225, 225, 225, 0.1);
 
 /*text catalog */
@@ -31,11 +33,13 @@
 --checkbox-style: #6A6A6A;
 --gray-text: #666666;
 --gray-borders: #E5E5E5;
+--gray-web: #BDBBBC;
 --toggle-shadow:rgba(171, 171, 171, 0.3);
 --gray-toggle:#ababab;
 --shadow-body:rgba(0, 1, 1, 0.2);
 --shadow-black: rgba(0, 1, 1, 0.15);
 --white-footer: rgba(255, 255, 255, 0.9);
+
 }
 
 *,
@@ -451,6 +455,7 @@ img {
   text-transform: uppercase;
   width: 36px;
   height: 38px;
+  text-align: center;
 }
 
 .appointment-item-figure input:hover {
@@ -550,36 +555,42 @@ img {
   .button-date{
   width: 38px;
   height: 38px;
+  padding-top: 7px;
+
+}
+.button-date:hover path {
+  fill: var(--text-black);
+}
+.button-date:active path {
+  fill: var(--blue-style);
 }
 
-.button-date::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 38px;
-  height: 38px;
-  background-image: url("../img/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.button-minus,
+.button-plus {
+width: 38px;
+height: 38px;
 }
 
-  .button-minus,
-  .button-plus {
-  width: 38px;
-  height: 38px;
+.button-minus {
+  padding-bottom: 9px;
 }
 
-.button-date:hover,
-.button-minus:hover,
-.button-plus:hover {
-  color: var(--text-black);
+.button-minus:hover rect {
+  fill: var(--text-black);
 }
 
-.button-date:active,
-.button-minus:active,
-.button-plus:active {
-  color: var(--blue-style);
+.button-minus:active rect {
+  fill: var(--blue-style);
 }
+
+.button-plus:hover path {
+  fill: var(--text-black);
+}
+
+.button-plus:active path {
+  fill: var(--blue-style);
+}
+
 
 .button-find {
   font: inherit;
@@ -590,7 +601,6 @@ img {
   text-transform: uppercase;
   background-color: var(--blue-style);
   border: none;
-
   width: 458px;
   height: 58px;
 }
@@ -679,6 +689,7 @@ img {
 .footer-copyright {
   margin-top: 39px;
   justify-self: center;
+  position: relative;
 }
 
 .social-button:hover {
@@ -696,6 +707,19 @@ img {
 
 .footer-copyright .by {
   padding-top: 0px;
+  position: absolute;
+  top: 12px;
+  right: 123px;
+  width: 74px;
+}
+
+
+.web-by:hover path {
+  fill: var(--blue-style);
+}
+
+.web-by:active path {
+  fill: var(--gray-web);
 }
 
   /*----Catalog-----*/
@@ -907,6 +931,21 @@ color: var(--white-style);
   position: absolute;
   left: 742px;
 }
+.sorting-button:hover path {
+  fill: var(--text-black)
+}
+
+.sorting-button:active path {
+  fill: var(--text-blue)
+}
+
+.sorting-button-down:hover path {
+  fill: var(--text-black)
+}
+
+.sorting-button-down:active path {
+  fill: var(--text-blue)
+}
 
 .sorting-button-down {
   position: absolute;
@@ -934,60 +973,6 @@ color: var(--white-style);
 .sorting-item-price a {
   color: var(--text-blue);
 }
-/*
-.social-button {
-  position: relative;
-}
-
-.sorting-button {
-  content: "";
-  position: absolute;
-  width: 11px;
-  height: 10px;
-  background-image: url("../img/icon-up-dir.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.sorting-button-down {
-  position: relative;
-}
-
-.sorting-button-down {
-  content: "";
-  position: absolute;
-  width: 11px;
-  height: 10px;
-  background-image: url("../img/icon-down-dir.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-/*
-.sorting-button a {
-  font: inherit;
-  text-align: center;
-  color: var(--text-black);
-  vertical-align: middle;
-  text-transform: uppercase;
-  color: var(--gray-sorting);
-  border: none;
-  background-color: var(--white-style);
-}
-
-.sorting-button a:hover {
-  color: var(--text-black);
-}
-
-.sorting-button a:active {
-  color: var(--blue-style);
-}
-
-.sorting-button-down a {
-  color: var(--text-blue);
-  background-color: var(--white-style);
-}
-*/
 /*Catalog*/
 
 .catalog-title {
@@ -1040,6 +1025,49 @@ color: var(--white-style);
   top: -28px;
 }
 
+.price-controls {
+  width: 317px;
+  height: 36px;
+  border: 2px  solid ;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.range {
+  position: absolute;
+  left: 45px;
+}
+
+.price-controls label {
+  margin-top: 5px;
+}
+
+.price-controls input {
+  width: 60px;
+  height: 14px;
+  text-align: left;
+  margin: 0;
+  color: var(--white-style);
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: var(--text-clear);
+}
+
+.price-controls label:nth-child(1) input {
+  text-align: center;
+  width: 46px;
+  margin-left: 37px;
+}
+
+.vl {
+  border-left: 2px solid var(--white-style);
+  height: 22px;
+  margin-top: 5px;
+}
+
 .catalog-name a:hover {
   color: var(--blue-style);
 }
@@ -1075,8 +1103,8 @@ position: relative;
 }
 
 .hotel3 {
-padding-left: 29px;
 margin-left: auto;
+padding-top: 96px;
 }
 
 .motel1 {
@@ -1104,6 +1132,7 @@ margin-left: auto;
 
 .motel3 {
   margin-left: auto;
+  padding-top: 96px;
 }
 
 .rectangle1{
@@ -1131,6 +1160,7 @@ margin-left: auto;
 
 .rectangle3{
   margin-left: auto;
+  padding-top: 96px;
 }
 
 .reyting {
@@ -1143,6 +1173,7 @@ margin-left: auto;
   border: none;
   width: 110px;
   height: 27px;
+  margin: 0;
 }
 
 .catalog-price {
