@@ -31,6 +31,8 @@
 --checkbox-style: #6A6A6A;
 --gray-text: #666666;
 --gray-borders: #E5E5E5;
+--toggle-shadow:rgba(171, 171, 171, 0.3);
+--gray-toggle:#ababab;
 --shadow-body:rgba(0, 1, 1, 0.2);
 --shadow-black: rgba(0, 1, 1, 0.15);
 --white-footer: rgba(255, 255, 255, 0.9);
@@ -55,7 +57,6 @@
   color: var(--text-black);
   text-transform: uppercase;
   background-color: var(--gray-fone);
-
 }
 
 .container {
@@ -426,6 +427,9 @@ img {
   text-transform: uppercase;
   width: 305px;
   height: 38px;
+  padding-left: 13px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 .appointment-item-form input:hover {
@@ -735,10 +739,115 @@ img {
   margin-left: auto;
 }
 
+.cost legend {
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.range-controls {
+position: relative;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--white-style);
+  background-color: var(--gray-toggle);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--toggle-shadow);
+  box-sizing: unset;
+}
+
+.range-controls .toggle:hover {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 10px solid var(--white-style);
+  background-color: var(--gray-toggle);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--toggle-shadow);
+  box-sizing: unset;
+}
+
+
+.range-controls .toggle-max {
+  left: 205px;
+}
+
+.price-controls input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--text-white-clear);
+  width: 316px;
+  margin-bottom: 33px;
+  margin-top: 20px;
+}
+
+.range-controls .bar {
+ width: 70%;
+ height: 2px;
+ background: var(--white-style);
+}
+
+.range-filter {
+  width: 316px;
+  margin-top: 27px;
+}
+
 .filter {
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
+}
+
+.filter-items {
+  list-style: none;
+}
+
+
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 23px;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+}
+
+.filter-input-checkbox:hover + label {
+color: var(--white-style);
+}
+
+.filter-input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  width: 26px;
+  height: 23px;
+  background-image: url("../img/checkbox-on.svg");
 }
 
 
@@ -765,6 +874,8 @@ img {
   font-size: 12px;
   line-height: 18px;
   font-weight: normal;
+  position: relative;
+  padding: 29px 73px 31px 73px;
 }
 
 .sorting-title {
@@ -773,6 +884,9 @@ img {
   font-weight: normal;
   margin: 0px;
   margin-left: 73px;
+  position: absolute;
+  top: 29px;
+  left: 163px;
 }
 
 .sorting-list {
@@ -780,6 +894,23 @@ img {
   padding: 0px;
   margin: 0px;
   display:flex ;
+  position: absolute;
+  top: 29px;
+  left: 351px;
+}
+
+.sorting-list li:nth-child(-n+3) {
+  margin-right: 33px;
+}
+
+.sorting-button {
+  position: absolute;
+  left: 742px;
+}
+
+.sorting-button-down {
+  position: absolute;
+  left: 763px;
 }
 
 .sorting-item a {
@@ -803,7 +934,36 @@ img {
 .sorting-item-price a {
   color: var(--text-blue);
 }
+/*
+.social-button {
+  position: relative;
+}
 
+.sorting-button {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/icon-up-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.sorting-button-down {
+  position: relative;
+}
+
+.sorting-button-down {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 10px;
+  background-image: url("../img/icon-down-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/*
 .sorting-button a {
   font: inherit;
   text-align: center;
@@ -827,14 +987,13 @@ img {
   color: var(--text-blue);
   background-color: var(--white-style);
 }
-
+*/
 /*Catalog*/
 
 .catalog-title {
   font-size: 21px;
   line-height: 26px;
   background-color: var(--white-style);
-  margin-left: 73px;
   margin-top: 29px;
   font-weight: bold;
 }
@@ -847,19 +1006,38 @@ img {
   flex-wrap: wrap;
 }
 
-.sorting-button {
-  justify-self: end;
-}
-
-.sorting-button-down {
-  justify-self: end;
-}
-
 .catalog-name a{
   color: var(--text-black);
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+}
+.catalog-name {
+  margin: 0;
+  margin-top: 24px;
+}
+
+.catalog-price {
+  margin: 0;
+  margin-top: 7px;
+  position: relative;
+}
+
+.price1{
+  margin: 0;
+  position: absolute;
+  top: 57px;
+  left: 143px;
+}
+
+.price2 {
+  top: -28px;
+  left: 115px;
+}
+
+.price3 {
+  left: 115px;
+  top: -28px;
 }
 
 .catalog-name a:hover {
@@ -876,12 +1054,12 @@ img {
   background-color: var(--white-style);
 }
 
-.catalog-item {
+.catalog-list li {
   display: flex;
   width: 1200px;
   margin-top: 1px;
-  padding: 0 85px 0 73px;
-  min-height: 150px;
+  padding: 0 73px 30px 73px;
+  height: 150px;
 }
 
 .hotel1 {
@@ -893,18 +1071,12 @@ padding-top: 30px;
 .hotel2 {
 width: 390px;
 padding-left: 29px;
+position: relative;
 }
 
 .hotel3 {
+padding-left: 29px;
 margin-left: auto;
-}
-
-.catalog-item-motel {
-  display: flex;
-  width: 1200px;
-  margin-top: 1px;
-  padding: 0 85px 0 73px;
-  min-height: 150px;
 }
 
 .motel1 {
@@ -916,18 +1088,22 @@ margin-left: auto;
 .motel2 {
   width: 390px;
   padding-left: 29px;
+  position: relative;
+}
+
+.button-motel1 {
+  position: absolute;
+  top: 74px;
+}
+
+.button-motel2 {
+  position: absolute;
+  top: 74px;
+  right: 104px;
 }
 
 .motel3 {
   margin-left: auto;
-}
-
-.catalog-item-rectangle {
-  display: flex;
-  width: 1200px;
-  margin-top: 1px;
-  padding: 0 85px 0 73px;
-  min-height: 150px;
 }
 
 .rectangle1{
@@ -936,9 +1112,21 @@ margin-left: auto;
   padding-top: 30px;
 }
 
+.button-rectangle1 {
+  position: absolute;
+  top: 74px;
+}
+
+.button-rectangle2 {
+  position: absolute;
+  top: 74px;
+  right: 104px;
+}
+
 .rectangle2{
   width: 390px;
   padding-left: 29px;
+  position: relative;
 }
 
 .rectangle3{
@@ -970,6 +1158,9 @@ margin-left: auto;
   text-transform: uppercase;
   background-color: var(--blue-style);
   border: none;
+  width: 110px;
+  height: 27px;
+  margin-top: 19px;
 }
 
 .button-catalog:hover {
@@ -990,6 +1181,9 @@ margin-left: auto;
   text-transform: uppercase;
   background-color: var(--brown-style);
   border: none;
+  width: 142px;
+  height: 27px;
+  margin-top: 19px;
 }
 
 .button-reserv:hover {
