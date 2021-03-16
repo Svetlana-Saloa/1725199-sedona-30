@@ -203,14 +203,14 @@ img {
 }
 
 .welcome::after {
-  content: url("../img/mask.svg");
+  content: url(../img/mask.svg);
   position: absolute;
   width: 100%;
   height: 60px;
-  top: 450px;
-  left: -4px;
+  top: 453px;
+  left: 0px;
   background-repeat: no-repeat;
-  }
+}
 
  /*Main-Content*/
 
