@@ -2,6 +2,7 @@
 
 :root {
   /*text index*/
+
   --text-black : #000000;
   --text-gray: #333333;
   --text-white: #FFFFFF;
@@ -9,13 +10,15 @@
   --text-white-clear:rgba(255, 255, 255, 0.3);
   --text-black-clear:rgba(0, 0, 0, 0.3);
   --text-clear:rgba(0, 0, 0, 0.01);
-
   --white-01: rgba(225, 225, 225, 0.1);
+  --white-03: rgba(255, 255, 255, 0.3);
 
 /*text catalog */
+
   --text-blue: #81B3D2;
 
 /*styling colors*/
+
 --gray-fone:#F2F2F2;
 --gray-style: #888888;
 --gray-style2: #EEEEEE;
@@ -195,7 +198,7 @@ img {
 
 .welcome .welcome-to-sedona {
   position: absolute;
-  top: 78px;
+  top: 77px;
   left: 50%;
   width: 457px;
   height: 351px;
@@ -706,7 +709,7 @@ height: 38px;
 
  .button-find:active {
  background-color: var(--blue-style3);
- color: var(--text-black-clear);
+ color: var(--white-03);
 }
 
 /*Map*/
@@ -789,9 +792,8 @@ position: relative;
 
 .footer-contacts {
   text-align: center;
-  margin: auto;
-  margin-left: 125px;
   margin-top: 16px;
+  padding-left: 73px;
 }
 
 .footer-contacts a {
@@ -812,8 +814,10 @@ position: relative;
 }
 
 .footer-copyright {
-  justify-self: center;
+  justify-content: center;
   display: flex;
+  width: 100%;
+  padding-right: 76px;
 }
 
 .social-button:hover {
@@ -824,14 +828,14 @@ position: relative;
   background-color: var(--blue-style3);
 }
 
-.social-button:focus path {
-  fill: var(--white-01);
+.social-button:active path {
+  fill: var(--white-03);
 }
 
 .by {
   line-height: 26px;
   margin: 0;
-  width: 136px;
+  width: 86px;
   height: 120px;
   padding-top: 48px;
   padding-right: 7px;
@@ -839,9 +843,10 @@ position: relative;
 }
 
 .web-by {
-  width: 242px;
+  width: 115px;
   padding-top: 39px;
 }
+
 .web-by:hover path {
   fill: var(--blue-style);
 }
@@ -912,17 +917,7 @@ position: relative;
 }
 
 .range-controls .toggle:hover {
-  position: absolute;
-  left: 0;
-  top: -8px;
-  width: 4px;
-  height: 4px;
-  padding: 0;
-  border: 10px solid var(--white-style);
-  background-color: var(--gray-toggle);
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 var(--toggle-shadow);
-  box-sizing: unset;
+  transform: scale(1.5, 1.5);
 }
 
 .range-controls .toggle-max {
@@ -1051,6 +1046,7 @@ color: var(--w);
 .sorting-title {
   font-size: 12px;
   line-height: 18px;
+  font-weight: 400;
   margin: 0px;
   width: 115px;
   padding-top: 2px;
@@ -1121,6 +1117,7 @@ border-bottom: 1px var(--blue-style) dashed;}
 .sorting-item a:active {
   color: var(--text-black);
   text-decoration:none;
+  border-bottom: none;
 }
 
 .sorting-item-price a {
@@ -1176,7 +1173,7 @@ padding-left: 13px;
   font-size: 21px;
   line-height: 26px;
   background-color: var(--white-style);
-  font-weight: bold;
+  font-weight: 700;
   width: 164px;
 }
 
